@@ -2,7 +2,7 @@ import TopicCard from "@/components/cards/TopicCard";
 const NEXT_PUBLIC_API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 async function getTopic(id){
-    const topicResponce =await fetch(`${NEXT_PUBLIC_API_URL}/topics/${id}`,{cache:"force-cache"})
+    const topicResponce =await fetch(`${NEXT_PUBLIC_API_URL}/api/topics/${id}`,{cache:"force-cache"})
     return topicResponce.json();
 }
 

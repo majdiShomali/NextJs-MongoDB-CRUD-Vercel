@@ -25,7 +25,7 @@ const ADDProductForm = () => {
         }
     
         try {
-          const res = await fetch(`${NEXT_PUBLIC_API_URL}/topics`, {
+          const res = await fetch(`${NEXT_PUBLIC_API_URL}/api/topics`, {
             method: "POST",
             headers: {
               "Content-type": "application/json",

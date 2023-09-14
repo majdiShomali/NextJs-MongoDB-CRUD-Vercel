@@ -7,7 +7,7 @@ const NEXT_PUBLIC_API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 const getTopics = async (page,limit,searchWord) => {
   try {
-    const res = await fetch(`${NEXT_PUBLIC_API_URL}/topics/0/[${page},${limit},"${searchWord.toString()}"]`, {
+    const res = await fetch(`${NEXT_PUBLIC_API_URL}/api/topics/0/[${page},${limit},"${searchWord.toString()}"]`, {
       // cache:"force-cache",//SSG getStaticSideProps
       // cache: "no-store", //SSR getServerSideProps
       next:{

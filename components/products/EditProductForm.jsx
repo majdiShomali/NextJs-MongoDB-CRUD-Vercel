@@ -30,7 +30,7 @@ const style = {
   p: 4,
 };
 const EditProductForm = ({ item }) => {
-  const ApiUrl = process.env.NEXT_PUBLIC_API_URL;
+  const NEXT_PUBLIC_API_URL = process.env.NEXT_PUBLIC_API_URL;
        //redux//
        const dispatch = useDispatch();
        //redux//
@@ -59,7 +59,7 @@ useEffect(()=>{
     e.preventDefault();
     console.log(title, description, item._id);
     try {
-      const res = await fetch(`http://localhost:3000/api/topics/${item._id}`, {
+      const res = await fetch(`${NEXT_PUBLIC_API_URL}/api/topics/${item._id}`, {
         method: "PUT",
         headers: {
           "Content-type": "application/json",
