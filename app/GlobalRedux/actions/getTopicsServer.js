@@ -9,7 +9,7 @@ export const fetchTopicsServerItems = createAsyncThunk(
   async () => {
     const getTopics = async () => {
         try {
-          const res = await fetch(`${NEXT_PUBLIC_API_URL}/topics`, {
+          const res = await fetch(`${NEXT_PUBLIC_API_URL}/api/topics`, {
             cache: "no-store",
           });
       

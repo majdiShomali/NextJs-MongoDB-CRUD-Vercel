@@ -7,7 +7,7 @@ const NEXT_PUBLIC_API_URL= process.env.NEXT_PUBLIC_API_URL
 export const fetchTopicsItems = createAsyncThunk(
   "TopicsItems/fetchTopicsItems",
   async () => {
-    const response = await axios.get(`${NEXT_PUBLIC_API_URL}/topics`);
+    const response = await axios.get(`${NEXT_PUBLIC_API_URL}/api/topics`);
     return response.data;
   }
 );
