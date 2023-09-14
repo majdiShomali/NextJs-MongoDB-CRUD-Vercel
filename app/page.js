@@ -1,7 +1,7 @@
 const NEXT_PUBLIC_API_URL = process.env.NEXT_PUBLIC_API_URL;
 const getTopics = async () => {
   try {
-    const res = await fetch(`${NEXT_PUBLIC_API_URL}/topics`, {
+    const res = await fetch(`${NEXT_PUBLIC_API_URL}/api/topics`, {
       cache:"force-cache",
     });
     if (!res.ok) {

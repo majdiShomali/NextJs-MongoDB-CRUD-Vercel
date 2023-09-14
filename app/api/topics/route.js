@@ -3,7 +3,6 @@ import Topic from "@/models/topic";
 import { NextResponse } from "next/server";
 
 export async function GET(request, { params }) {
-
   try {
     await connectMongoDB();
     const topics = await Topic.find()
