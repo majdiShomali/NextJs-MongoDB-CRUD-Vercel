@@ -13,10 +13,10 @@ const NEXT_PUBLIC_API_URL = process.env.NEXT_PUBLIC_API_URL;
 //   }
 // };
 export default async function Home() {
-  // const {topics} = await getTopics();
+  const {topics} = await getTopics();
   return (
    <>
-   {/* <div>
+   <div>
    {topics.map((topic)=>{
     return(
       <div key={topic._id}>
@@ -24,7 +24,7 @@ export default async function Home() {
       </div>
     )
    })}
-   </div> */}
+   </div>
    </>
   )
 }
