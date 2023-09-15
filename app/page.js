@@ -1,7 +1,8 @@
 import React from "react";
 import HeroSection from "@/components/home/HeroSection";
 import TopicCard from "@/components/cards/TopicCard";
-
+import NewCard from "@/components/cards/NewCard";
+import Section from "@/components/home/Section";
 const NEXT_PUBLIC_API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 const getTopics = async () => {
@@ -26,16 +27,13 @@ const getTopics = async () => {
 
 const Home = async () => {
   const { topics,totalPages } = await getTopics();
-
   return (
     <>
       <HeroSection />
-      <div className="bg-gray-100 flex flex-wrap justify-center items-center gap-5 h-screen">
-        <TopicCard topics={topics} />
+      <Section/>
+      <div className="bg-gray-100 flex flex-wrap justify-center items-center gap-5 ">
+        <NewCard topics={topics}/>
       </div>
-
-      
-   
     </>
   );
 };

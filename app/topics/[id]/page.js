@@ -1,4 +1,6 @@
 import TopicCard from "@/components/cards/TopicCard";
+import NewCard from "@/components/cards/NewCard";
+
 const NEXT_PUBLIC_API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 async function getTopic(id){
@@ -12,7 +14,7 @@ const TopicPage = async({params}) => {
     const {topic} = await getTopic(params.id)
   return (
     <div className="w-full flex flex-wrap justify-center">
-         <TopicCard topics={[topic]} />
+         <NewCard topics={[topic]} />
     </div>
   )
 }

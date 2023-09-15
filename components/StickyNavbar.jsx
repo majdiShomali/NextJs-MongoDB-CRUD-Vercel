@@ -74,7 +74,7 @@ export function StickyNavbar() {
           <Typography
             className="mr-4 cursor-pointer py-1.5 font-medium"
           >
-            Material Tailwind
+            Next JS
           </Typography>
           </Link>
           <div className="flex items-center gap-4">

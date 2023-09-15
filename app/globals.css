@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+/* NewCard.css */
+@keyframes slideInFromBottom {
+    from {
+      transform: translateY(10px); /* Start the button slightly below */
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0); /* Move the button to its original position */
+      opacity: 1;
+    }
+  }
+  
+  .fade-in-button {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    animation: slideInFromBottom 0.3s ease-in-out forwards; /* Apply the animation */
+  }
