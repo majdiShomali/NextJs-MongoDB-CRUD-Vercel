@@ -10,7 +10,7 @@ const NewCard = ({topics}) => {
         <>
     {topics.map((topic)=>{
         return(
-
+       
             <div key={topic._id}
             
             className="relative w-32 h-52 lg:w-48 lg:h-64">
