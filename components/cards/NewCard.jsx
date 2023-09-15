@@ -11,7 +11,9 @@ const NewCard = ({topics}) => {
     {topics.map((topic)=>{
         return(
 
-            <div  className="relative w-32 h-52 lg:w-48 lg:h-64">
+            <div key={topic._id}
+            
+            className="relative w-32 h-52 lg:w-48 lg:h-64">
             <div className="bg-white w-32 h-52 lg:w-48 lg:h-64 shadow-lg absolute right-0 top-0 rotate-6"></div>
 
             <div className="bg-white w-32 h-52 lg:w-48 lg:h-64 shadow-lg absolute right-0 top-0 p-5">
