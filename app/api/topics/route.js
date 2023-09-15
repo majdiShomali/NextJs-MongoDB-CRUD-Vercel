@@ -14,20 +14,27 @@ export async function POST(request) {
 }
 
 export async function GET(request, { params }) {
+  try {
+    await connectMongoDB();
   const page = params ? parseInt((JSON.parse(params.num))[0]) : 1;
   const perPage = params ? parseInt((JSON.parse(params.num))[1]) : 5;
 
-  // Fetch the total number of topics
   const totalTopics = await Topic.countDocuments();
 
   const topics = await Topic.find()
     .skip((page - 1) * perPage)
     .limit(perPage);
 
-  // Calculate the total number of pages
   const totalPages = Math.ceil(totalTopics / perPage);
 
+  // return NextResponse.json({ topics,totalPages }, { status: 201 });
+
   return NextResponse.json({ topics, totalPages });
+  } catch (error) {
+    return NextResponse.json({ message: error }, { status: 500 });
+
+  }
+  
 }
 
 export async function DELETE(request) {
