@@ -1,9 +1,7 @@
 "use client"
 import React from 'react'
 import { Carousel } from "@material-tailwind/react";
-// import { HashLink } from 'react-router-hash-link';
 import HeroImageOne from './HeroImageOne';
-// import HeroImageTwo from './HeroImageTwo';
 
 const HeroSection = () => {
   return (
@@ -14,6 +12,7 @@ const HeroSection = () => {
           {new Array(length).fill("").map((_, i) => (
             <span
               key={i}
+              aria-label={activeIndex === i ? "Current Slide" : `Go to Slide ${i + 1}`}
               className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
                 activeIndex === i ? "w-8 bg-white" : "w-4 bg-white/50"
               }`}
