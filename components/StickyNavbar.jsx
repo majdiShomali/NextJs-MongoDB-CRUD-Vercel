@@ -28,7 +28,7 @@ export function StickyNavbar() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <Link href="/topics/addTopic" className="flex items-center">
+        <Link aria-label={`Topics`} href="/topics/addTopic" className="flex items-center">
           Topics
         </Link>
       </Typography>
@@ -38,7 +38,7 @@ export function StickyNavbar() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <Link href="/allTopics?page=1&search=" className="flex items-center">
+        <Link aria-label={`all-Topics`} href="/allTopics?page=1&search=" className="flex items-center">
           all Topics
         </Link>
       </Typography>
@@ -48,9 +48,9 @@ export function StickyNavbar() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <Link aria-label={`Blocks`} href="#" className="flex items-center">
           Blocks
-        </a>
+        </Link>
       </Typography>
       <Typography
         as="li"
@@ -58,9 +58,9 @@ export function StickyNavbar() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <Link aria-label={`Docs`} href="#" className="flex items-center">
           Docs
-        </a>
+        </Link>
       </Typography>
     </ul>
   );
@@ -68,7 +68,7 @@ export function StickyNavbar() {
   return (
     <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4">
       <div className="flex items-center justify-between text-blue-gray-900">
-        <Link href="/">
+        <Link aria-label={`Next-JS`} href="/">
           <Typography className="mr-4 cursor-pointer py-1.5 font-medium">
             Next JS
           </Typography>

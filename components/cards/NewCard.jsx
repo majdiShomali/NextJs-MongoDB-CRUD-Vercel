@@ -12,15 +12,20 @@ const NewCard = ({ topics }) => {
     <>
       {topics.map((topic) => {
         return (
-          <div key={topic._id} className="relative w-32 h-52 lg:w-48 lg:h-64 mb-10">
-            <div className="bg-white w-32 h-52 lg:w-48 lg:h-64 shadow-lg absolute right-0 top-0 rotate-6"></div>
+          <div key={topic._id} className="relative w-32 h-52 lg:w-44 lg:h-64 mb-10">
+            <div className="bg-white w-32 h-52 lg:w-44 lg:h-64 shadow-lg absolute right-0 top-0 rotate-6"></div>
 
-            <div className="bg-white w-32 h-52 lg:w-48 lg:h-64 shadow-lg absolute right-0 top-0 p-5">
+            <div className="bg-white w-32 h-52 lg:w-44 lg:h-64 shadow-lg absolute right-0 top-0 p-5">
               <div className="group h-full w-full relative ">
                 <Image
                   loader={imageLoader}
-                  src="https://images.ctfassets.net/23aumh6u8s0i/c04wENP3FnbevwdWzrePs/1e2739fa6d0aa5192cf89599e009da4e/nextjs"
+                  src="https://miro.medium.com/max/1176/1*LvA59wJi3O9jTMQQsw_cRA.png"
                   alt={`Picture of the author ${topic._id}`}
+                  priority={true}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
+                  // width={500}
+                  // height={800}
                   fill
                 />
                    
@@ -37,7 +42,7 @@ const NewCard = ({ topics }) => {
                       {topic.title}
                     </h3>
                   </div>
-                  <Link href={`/topics/${topic._id}`}>
+                  <Link passHref aria-label={`/topics/${topic.title}`} href={`/topics/${topic._id}`}>
                     <Button
                       variant="gradient"
                       size="sm"

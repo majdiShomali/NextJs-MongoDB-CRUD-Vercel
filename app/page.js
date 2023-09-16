@@ -1,6 +1,6 @@
 import React from "react";
 import HeroSection from "@/components/home/HeroSection";
-import TopicCard from "@/components/cards/TopicCard";
+// import TopicCard from "@/components/cards/TopicCard";
 import NewCard from "@/components/cards/NewCard";
 import Section from "@/components/home/Section";
 const NEXT_PUBLIC_API_URL = process.env.NEXT_PUBLIC_API_URL;
